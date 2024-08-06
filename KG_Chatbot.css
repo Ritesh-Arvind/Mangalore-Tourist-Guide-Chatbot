@@ -1,0 +1,111 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(238, 182, 132);
+}
+
+.chat-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: rgba(11, 11, 11, 0.438)     ;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.chat-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chat-box {
+    height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-right: 10px;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: greenyellow;
+}
+
+.user-message, .responder-message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-message .message-bubble, .responder-message .message-bubble {
+    background-color: grey;
+    color: whitesmoke;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+    font-weight: bold;
+}
+
+.user-message .message-bubble::before, .responder-message .message-bubble::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid white;
+}
+
+.sender {
+    font-family: 'Arial', sans-serif; /* Change font for sender names */
+}
+
+.user-message .message-bubble .sender {
+    font-weight: bold; /* Make sender name bold for user messages */
+}
+
+.responder-message .message-bubble .sender {
+    font-style: italic; /* Make sender name italic for responder messages */
+}
+
+.user-message .message-bubble,
+.responder-message .message-bubble {
+    margin-left: 0; /* Remove margin for message bubbles */
+}
+
+.user-message .message-bubble .message-text,
+.responder-message .message-bubble .message-text {
+    display: inline-block; /* Set background color for message box */
+    padding: 10px 20px;
+    border-radius: 20px;
+}
